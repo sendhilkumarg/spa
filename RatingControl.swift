@@ -16,12 +16,6 @@ class RatingControl: UIView {
     }
     
     var stars = 5
-        {
-        didSet{
-            setNeedsLayout()
-        }
-    }
-
     
     var ratingButtons = [ UIButton]()
     
@@ -36,12 +30,12 @@ class RatingControl: UIView {
 
      required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        /*
         let emptyStarImage = UIImage(named: "emptyStar")
         let filledStarmage = UIImage(named: "filledStar")
         
         for _ in 0..<stars {
-
+    
             
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         button.setImage(emptyStarImage, forState: .Normal)
@@ -57,6 +51,35 @@ class RatingControl: UIView {
 
         //ratingButtons += [button]
         }
+        */
+       // CreateStars()
+    }
+    
+    func CreateStars(){
+        
+        
+        let emptyStarImage = UIImage(named: "emptyStar")
+        let filledStarmage = UIImage(named: "filledStar")
+        ratingButtons.removeAll()
+        for _ in 0..<stars {
+            
+            
+            let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+            button.setImage(emptyStarImage, forState: .Normal)
+            button.setImage(filledStarmage, forState: .Selected)
+            button.setImage(filledStarmage, forState: [.Highlighted , .Selected ])
+            button.adjustsImageWhenHighlighted = false;
+            
+            //button.backgroundColor = UIColor.blueColor()
+            button.addTarget(self, action: "ratingButtonTapped:", forControlEvents: .TouchDown)
+            addSubview(button)
+            
+            ratingButtons.append(button)
+            
+            //ratingButtons += [button]
+        }
+
+        
     }
     
     override func intrinsicContentSize() -> CGSize {
@@ -76,7 +99,7 @@ class RatingControl: UIView {
     // MARK: Button Action
     
     func ratingButtonTapped(button:UIButton){
-        
+        print ("(ratingButtons.indexOf(button)!)");
         rating = ratingButtons.indexOf(button)! + 1;
        // updateButtonSelectionStates();
 

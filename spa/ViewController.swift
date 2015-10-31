@@ -42,11 +42,13 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     }
     override func viewDidLayoutSubviews() {
         ratingControl.stars=6;
+        ratingControl.layoutSubviews()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         txtSearch.delegate = self
-        //ratingControl.stars=6
+        ratingControl.stars=6
+        ratingControl.CreateStars()
         // Do any additional setup after loading the view, typically from a nib.
     }
 /*
@@ -89,6 +91,8 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
         // lblText1.text = "Hi Sendhil!";
         btn1.enabled = false;
         btn2.enabled = true;
+        //ratingControl.CreateStars()
+        //ratingControl.setNeedsLayout()
         
         lblText1.text = "Hi \(ratingControl.stars)"
     }

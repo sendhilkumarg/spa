@@ -21,9 +21,17 @@ class spaTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMealInitialization() {
+        
+        var meal = Meal(name: "", photo: nil, rating: 5)
+        XCTAssertNil(meal)
+        
+        meal = Meal(name: "PIZZA", photo: nil, rating: -1)
+        XCTAssertNil(meal, "Negative ratings are invalid, be positive")
+        
+        meal = Meal(name: "PIZZA", photo: nil, rating: 5)
+        XCTAssertNotNil(meal)
+
     }
     
     func testPerformanceExample() {

@@ -16,6 +16,8 @@
 		BC4B85351BDB229900BF89FC /* spaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B85341BDB229900BF89FC /* spaTests.swift */; };
 		BC4B85401BDB229900BF89FC /* spaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B853F1BDB229900BF89FC /* spaUITests.swift */; };
 		BC67B5BF1BE407C900D5F59E /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC67B5BE1BE407C900D5F59E /* RatingControl.swift */; settings = {ASSET_TAGS = (); }; };
+		BCB16ECF1BE47256001E31DE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB16ECE1BE47256001E31DE /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
+		BCB16ED01BE47256001E31DE /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB16ECE1BE47256001E31DE /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		BC4B853F1BDB229900BF89FC /* spaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spaUITests.swift; sourceTree = "<group>"; };
 		BC4B85411BDB229900BF89FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC67B5BE1BE407C900D5F59E /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingControl.swift; path = ../RatingControl.swift; sourceTree = "<group>"; };
+		BCB16ECE1BE47256001E31DE /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = ../../../../Desktop/Trials/spa/Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 				BC4B85281BDB229900BF89FC /* LaunchScreen.storyboard */,
 				BC4B852B1BDB229900BF89FC /* Info.plist */,
 				BC4B85231BDB229900BF89FC /* spa.xcdatamodeld */,
+				BCB16ECE1BE47256001E31DE /* Meal.swift */,
 			);
 			path = spa;
 			sourceTree = "<group>";
@@ -261,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB16ECF1BE47256001E31DE /* Meal.swift in Sources */,
 				BC67B5BF1BE407C900D5F59E /* RatingControl.swift in Sources */,
 				BC4B851F1BDB229900BF89FC /* ViewController.swift in Sources */,
 				BC4B851D1BDB229900BF89FC /* AppDelegate.swift in Sources */,
@@ -272,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB16ED01BE47256001E31DE /* Meal.swift in Sources */,
 				BC4B85351BDB229900BF89FC /* spaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
