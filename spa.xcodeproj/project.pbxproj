@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC4B851D1BDB229900BF89FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B851C1BDB229900BF89FC /* AppDelegate.swift */; };
-		BC4B851F1BDB229900BF89FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B851E1BDB229900BF89FC /* ViewController.swift */; };
+		BC4B851F1BDB229900BF89FC /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4B851E1BDB229900BF89FC /* MealViewController.swift */; };
 		BC4B85221BDB229900BF89FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4B85201BDB229900BF89FC /* Main.storyboard */; };
 		BC4B85251BDB229900BF89FC /* spa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC4B85231BDB229900BF89FC /* spa.xcdatamodeld */; };
 		BC4B85271BDB229900BF89FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4B85261BDB229900BF89FC /* Assets.xcassets */; };
@@ -44,7 +44,7 @@
 /* Begin PBXFileReference section */
 		BC4B85191BDB229900BF89FC /* spa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4B851C1BDB229900BF89FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC4B851E1BDB229900BF89FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC4B851E1BDB229900BF89FC /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		BC4B85211BDB229900BF89FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC4B85241BDB229900BF89FC /* spa.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = spa.xcdatamodel; sourceTree = "<group>"; };
 		BC4B85261BDB229900BF89FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			children = (
 				BC67B5BE1BE407C900D5F59E /* RatingControl.swift */,
 				BC4B851C1BDB229900BF89FC /* AppDelegate.swift */,
-				BC4B851E1BDB229900BF89FC /* ViewController.swift */,
+				BC4B851E1BDB229900BF89FC /* MealViewController.swift */,
 				BC4B85201BDB229900BF89FC /* Main.storyboard */,
 				BCB16ED71BE5582F001E31DE /* MealTableViewController.swift */,
 				BC4B85261BDB229900BF89FC /* Assets.xcassets */,
@@ -277,7 +277,7 @@
 				BC67B5BF1BE407C900D5F59E /* RatingControl.swift in Sources */,
 				BCB16ED81BE5582F001E31DE /* MealTableViewController.swift in Sources */,
 				BCB16ED51BE54DC7001E31DE /* MealTableViewCell.swift in Sources */,
-				BC4B851F1BDB229900BF89FC /* ViewController.swift in Sources */,
+				BC4B851F1BDB229900BF89FC /* MealViewController.swift in Sources */,
 				BC4B851D1BDB229900BF89FC /* AppDelegate.swift in Sources */,
 				BC4B85251BDB229900BF89FC /* spa.xcdatamodeld in Sources */,
 			);

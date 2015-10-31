@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MealViewController.swift
 //  spa
 //
 //  Created by Sendhil kumar Gurunathan on 10/24/15.
@@ -8,19 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITextFieldDelegate ,
+class MealViewController: UIViewController , UITextFieldDelegate ,
 UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
 
     //MARK: Properties
     
-    //@IBOutlet weak var lblText: UILabel!
     @IBOutlet weak var lblText1: UILabel!
 
     @IBOutlet weak var btn1: UIButton!
    
     @IBOutlet weak var btn2: UIButton!
-//    @IBOutlet weak var btnClicker: UIButton!
     
     @IBOutlet weak var txtSearch: UITextField!
 
@@ -41,8 +39,8 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
         
     }
     override func viewDidLayoutSubviews() {
-        ratingControl.stars=6;
-        ratingControl.layoutSubviews()
+        //ratingControl.stars=6;
+        //ratingControl.layoutSubviews()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +64,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        lblText1.text = textField.text;
+        //lblText1.text = textField.text;
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -94,11 +92,11 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
         //ratingControl.CreateStars()
         //ratingControl.setNeedsLayout()
         
-        lblText1.text = "Hi \(ratingControl.stars)"
+        //lblText1.text = "Hi \(ratingControl.stars)"
     }
     
     @IBAction func btnClickAgain(sender: UIButton) {
-        lblText1.text = "Hi Again!";
+        //lblText1.text = "Hi Again!";
         btn1.enabled = true;
         btn2.enabled = false;
 
