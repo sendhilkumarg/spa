@@ -27,6 +27,9 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     
     @IBOutlet weak var ratingControl: RatingControl!
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var meal : Meal?
     
     
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
@@ -56,6 +59,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     }
     */
     
+
     // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -101,5 +105,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
         btn2.enabled = false;
 
     }
+    
+    //MARK: Navigation
 }
 
