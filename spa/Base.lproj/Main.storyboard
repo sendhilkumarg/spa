@@ -127,7 +127,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="V2a-ip-bG8">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sst-cL-uk7"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sst-cL-uk7">
+                            <connections>
+                                <action selector="cancelAction:" destination="BYZ-38-t0r" id="bsy-lp-11V"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="2ad-8B-CFk">
                             <connections>
                                 <segue destination="g9k-U1-eke" kind="unwind" unwindAction="unwindToMealList:" id="OHC-ED-4Au"/>

@@ -30,7 +30,7 @@ class RatingControl: UIView {
 
      required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        /*
+       
         let emptyStarImage = UIImage(named: "emptyStar")
         let filledStarmage = UIImage(named: "filledStar")
         
@@ -51,8 +51,8 @@ class RatingControl: UIView {
 
         //ratingButtons += [button]
         }
-        */
-       // CreateStars()
+        
+        //CreateStars()
     }
     
     func CreateStars(){
@@ -60,7 +60,7 @@ class RatingControl: UIView {
         
         let emptyStarImage = UIImage(named: "emptyStar")
         let filledStarmage = UIImage(named: "filledStar")
-        ratingButtons.removeAll()
+        //ratingButtons.removeAll()
         for _ in 0..<stars {
             
             

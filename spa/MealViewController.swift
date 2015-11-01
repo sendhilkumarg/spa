@@ -29,6 +29,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    //@IBOutlet weak var cancelButton: UIBarButtonItem!
     var meal : Meal?
     
     
@@ -48,8 +49,9 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         txtSearch.delegate = self
-        ratingControl.stars=6
-        ratingControl.CreateStars()
+        //ratingControl.stars=6
+        //ratingControl.CreateStars()
+        checkValidMealName()
         // Do any additional setup after loading the view, typically from a nib.
     }
 /*
@@ -66,9 +68,20 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
         textField.resignFirstResponder()
         return true
     }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        //saveButton.enabled = true;
+    }
     
     func textFieldDidEndEditing(textField: UITextField) {
         //lblText1.text = textField.text;
+        //saveButton.enabled = false
+        checkValidMealName()
+        navigationItem.title = textField.text;
+    }
+    
+    func checkValidMealName(){
+        let name = txtSearch.text ?? ""
+        saveButton.enabled =  !name.isEmpty
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -115,6 +128,15 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
             
             self.meal = Meal(name: name, photo: image, rating: ratings)
         }
+        else    {
+            print("seage not by save button")
+        }
     }
+    
+    @IBAction func cancelAction(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
 }
 
