@@ -49,6 +49,14 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         txtSearch.delegate = self
+        
+        if(self.meal != nil){
+            let m = meal!
+            txtSearch.text = m.name
+            photoImageView.image = m.photo
+            ratingControl.rating = m.rating
+        }
+        
         //ratingControl.stars=6
         //ratingControl.CreateStars()
         checkValidMealName()
@@ -134,7 +142,17 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     }
     
     @IBAction func cancelAction(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        let isPresentingInAddMode = presentingViewController is UINavigationController;
+        if(isPresentingInAddMode){
+             dismissViewControllerAnimated(true, completion: nil)
+        }
+        else
+        {
+            navigationController!.popViewControllerAnimated(true)
+        }
+        
+       
     }
     
     
