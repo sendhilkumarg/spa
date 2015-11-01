@@ -107,5 +107,14 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate
     }
     
     //MARK: Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if ( sender === saveButton){
+            let name = txtSearch.text ?? ""
+            let image = photoImageView.image
+            let ratings = ratingControl.rating
+            
+            self.meal = Meal(name: name, photo: image, rating: ratings)
+        }
+    }
 }
 

@@ -67,7 +67,29 @@ class MealTableViewController: UITableViewController {
         return cell
     }
 
-
+    @IBAction func unwindToMealList(sender: UIStoryboardSegue){
+        
+        /*
+        if let sourceViewController = sender.sourceViewController as? MealViewController, meal = sourceViewController.meal {
+        }
+        */
+        
+        let mealViewControler = sender.sourceViewController as? MealViewController;
+        if mealViewControler != nil{
+            if( mealViewControler!.meal != nil){
+                
+                let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
+                meals.append(mealViewControler!.meal!)
+                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            }
+            
+        }
+        
+        
+        
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
