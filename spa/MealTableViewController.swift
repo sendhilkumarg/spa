@@ -24,15 +24,37 @@ class MealTableViewController: UITableViewController {
         
         //meals.append(meal1)
         
+        
         meals += [meal1,meal2,meal3]
+
         
-        
+    }
+    
+    func loadMealsFromDisc() ->[Meal]?{
+        return  NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL.path!) as? [Meal]
+    }
+    
+    func SaveData(){
+        print(Meal.ArchiveURL.path!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path!)
+        if !isSuccessfulSave {
+            print("Failed to save meals...")
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem()
-        loadMealsData()
+        //loadMealsData()
+        
+        if let savedMeals = loadMealsFromDisc(){
+            meals += savedMeals;
+            
+        }
+        else
+        {
+            loadMealsData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,27 +105,9 @@ class MealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            SaveData()
         }
         
-        /*
-        let mealViewControler = sender.sourceViewController as? MealViewController;
-        if mealViewControler != nil{
-            if( mealViewControler!.meal != nil){
-                
-                if  let selectedRow = tableView.indexPathForSelectedRow
-                {
-                    meals[selectedRow.row] = mealViewControler!.meal!
-                }
-                else
-                {
-                    let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
-                    meals.append(mealViewControler!.meal!)
-                    tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-                }
-
-            }
-            
-        }*/
         
         
         
@@ -124,6 +128,7 @@ class MealTableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             meals.removeAtIndex(indexPath.row)
+            SaveData()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

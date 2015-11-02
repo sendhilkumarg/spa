@@ -185,22 +185,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "spa/MealTableViewController.swift"
-            timestampString = "468059860.578949"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "unwindToMealList(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "spa/MealViewController.swift"
             timestampString = "468056390.885041"
             startingColumnNumber = "9223372036854775807"
@@ -250,13 +234,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "spa/MealTableViewController.swift"
-            timestampString = "468060265.915126"
+            timestampString = "468140149.262742"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Desktop/Trials/spa/Meal.swift"
+            timestampString = "468109889.976118"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "Meal"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "spa.Meal.DocumentsDirectory.unsafeMutableAddressor : ObjectiveC.NSURL"
+                  moduleName = "spa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sendhilkumargurunathan/Desktop/Trials/spa/Meal.swift"
+                  timestampString = "468140150.278601"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static spa.Meal.DocumentsDirectory.getter : ObjectiveC.NSURL"
+                  moduleName = "spa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sendhilkumargurunathan/Desktop/Trials/spa/Meal.swift"
+                  timestampString = "468140150.27877"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
